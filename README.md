@@ -8,13 +8,8 @@ A Gen-Z vibe blog platform built with a 3-tier architecture — React frontend, 
 
 ---
 
-> [!IMPORTANT]
-> **Looking for the full DevSecOps implementation?**
-> Switch to the [`devops`](../../tree/devops) branch for Docker, Kubernetes (EKS Auto Mode), Terraform, CI/CD with GitHub Actions, container security scanning, and more.
->
-> ```bash
-> git checkout devops
-> ```
+> [!NOTE]
+> This repository contains the full DevSecOps implementation: Docker, Kubernetes (EKS Auto Mode), Terraform, GitHub Actions CI/CD with security scanning (ESLint, npm audit, Trivy, Hadolint, Checkov), and Kubernetes NetworkPolicies.
 
 ---
 
