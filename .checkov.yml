@@ -7,20 +7,11 @@
 #directory:
 #  - terraform
 
-#skip-check: "CKV_AWS_39,CKV_AWS_58,CKV_TF_1"  # CKV_TF_1 requires git commit-hash sourcing, impractical for
+skip-check: "CKV_AWS_39,CKV_AWS_58,CKV_TF_1"  # CKV_TF_1 requires git commit-hash sourcing, impractical for
                                                 # verified Terraform Registry modules; exact version pin + committed
                                                 # .terraform.lock.hcl is the practical equivalent.
-#soft-fail: false
-#framework:
-##  - terraform
-#directory:
-#  - terraform
-
-- name: Run Checkov
-  uses: bridgecrewio/checkov-action@master
-  with:
-    directory: terraform/
-    framework: terraform
-    skip_check: CKV_AWS_39,CKV_AWS_58,CKV_TF_1
-    download_external_modules: true   # <-- add this
-    output_format: cli
+soft-fail: false
+framework:
+  - terraform
+directory:
+  - terraform
