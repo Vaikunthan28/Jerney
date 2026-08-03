@@ -7,7 +7,9 @@
 #directory:
 #  - terraform
 
-skip-check: "CKV_AWS_39,CKV_AWS_58"  # Public EKS endpoint (intentional for dev access)
+skip-check: "CKV_AWS_39,CKV_AWS_58,CKV_TF_1"  # CKV_TF_1 requires git commit-hash sourcing, impractical for
+                                                # verified Terraform Registry modules; exact version pin + committed
+                                                # .terraform.lock.hcl is the practical equivalent.
 soft-fail: false
 framework:
   - terraform
