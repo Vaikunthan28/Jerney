@@ -13,7 +13,8 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 RUN apk update && apk upgrade --no-cache
 
 # Security: remove unnecessary packages
-RUN apk --no-cache add dumb-init=1.2.5-r4
+RUN apk update && apk upgrade --no-cache && \
+    apk --no-cache add dumb-init
 
 WORKDIR /app
 
